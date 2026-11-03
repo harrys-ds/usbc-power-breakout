@@ -34,9 +34,14 @@ A small breadboard-friendly board that takes power from any USB-C charger and pr
 | C1, C2 | Capacitor | 1 µF, 0805 | 2 |
 | J2 | Pin header | 1x03, 2.54 mm | 1 |
 
-## What I learned / problems I hit
+## What I learned / problems I hit 
 <!-- Fill this in as you go. This is the section recruiters actually read. -->
-- 
+- Making a clean power supply
+- starting with "USB_C_Receptacle_PowerOnly_6P"
+- VBUS: The 5v coming from charger
+- GND: Ground
+- CC1, CC2: Handshake pins
+- SHIELD: metal shell of connector.  
 
 ## Testing
 <!-- Measured output voltages, which chargers it worked with, etc. -->
