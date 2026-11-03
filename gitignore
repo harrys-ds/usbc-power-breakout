@@ -1,0 +1,17 @@
+# KiCad backups and autosaves
+*-backups/
+_autosave-*
+*.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# KiCad local/per-user files
+*.kicad_prl
+*.lck
+fp-info-cache
+~*.lck
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
