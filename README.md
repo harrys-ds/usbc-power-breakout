@@ -41,7 +41,28 @@ A small breadboard-friendly board that takes power from any USB-C charger and pr
 - VBUS: The 5v coming from charger
 - GND: Ground
 - CC1, CC2: Handshake pins
-- SHIELD: metal shell of connector.  
+- SHIELD: metal shell of connector.
+
+- power led
+-   lights up whenever 5v is present
+-   if resistor wasn't there it would burn out
+
+- 3.3v regulator, less power 
+-   takes 5v in and holds it at 3.3v
+-   ap2112k is a LDO, constantly adjusts voltage to keep output at 3.3v
+-   dropped voltage turns to heat - a tradeoff
+-   EN: regulator only runs when EN is high, tying to VIN means it switches on when power arrives.
+- The two µF capacitors
+-   C2: tiny energy reserve - covers sudden current demands the USB cable can't respond to fast enough (VIN stabilization) 
+-   C1: keeps regulator stable & smooths 3.3v output when load changes.
+- Output Header (J2)
+-   +5v - for 5v devices 
+-   +3v3 - devices such as ESP32 or RP2040
+-   GND - return path for both
+
+- 5v pin is raw usb power, 3.3 is more regulated.
+
+
 
 ## Testing
 <!-- Measured output voltages, which chargers it worked with, etc. -->
